@@ -1,5 +1,6 @@
 package net.z.anendlesswar.datagen;
 
+import net.z.anendlesswar.block.ModBlocks;
 import net.z.anendlesswar.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -17,7 +18,8 @@ public class ModDataMapProvider extends DataMapProvider {
     @Override
     protected void gather() {
         this.builder(NeoForgeDataMaps.FURNACE_FUELS)
-                .add(ModItems.VORGRAN_COAL.getId(), new FurnaceFuel(1200), false);
+                .add(ModItems.VORGRAN_COAL.getId(), new FurnaceFuel(3200), false)
+                .add(ModBlocks.VORGRAN_COAL_BLOCK.getId(), new FurnaceFuel(32000), false);
 
     }
 }

@@ -42,19 +42,106 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        basicItem(ModItems.TIN_INGOT.get());
+
+        basicItem(ModItems.VORGRAN_COAL.get());
+
         basicItem(ModItems.RAW_TIN.get());
+        basicItem(ModItems.RAW_GALENA.get());
+        basicItem(ModItems.CALCINED_BONES.get());
+
+        basicItem(ModItems.TIN_INGOT.get());
+        basicItem(ModItems.COPPER_TIN_BLEND.get());
+        basicItem(ModItems.BRONZE_INGOT.get());
+        basicItem(ModItems.SILVER_INGOT.get());
+        basicItem(ModItems.KHARVAK_AMALGAMATION.get());
+        basicItem(ModItems.KHARVAK_IRON_INGOT.get());
+        basicItem(ModItems.SOLRA_LUMP.get());
+        basicItem(ModItems.SOLRA_INGOT.get());
+
         basicItem(ModItems.CRUSHED_TIN.get());
+        basicItem(ModItems.CRUSHED_SILVER.get());
+
+        basicItem(ModItems.HELSHARD.get());
         basicItem(ModItems.SACRED_OLIVE_BRANCH.get());
-        basicItem(ModItems.OLIVE_SIGN.get());
+        basicItem(ModItems.PTAHS_DISC.get());
+        basicItem(ModItems.REMNANT_CONTAMINATED_BONE.get());
+
+        basicItem(ModItems.BRONZE_COIN.get());
+        basicItem(ModItems.SILVER_COIN.get());
+        basicItem(ModItems.KHARVAK_COIN.get());
+        basicItem(ModItems.SOLRA_COIN.get());
 
         buttonItem(ModBlocks.OLIVE_BUTTON, ModBlocks.OLIVE_PLANKS);
         fenceItem(ModBlocks.OLIVE_FENCE, ModBlocks.OLIVE_PLANKS);
         basicItem(ModBlocks.OLIVE_DOOR.asItem());
 
+        buttonItem(ModBlocks.SACRED_OLIVE_BUTTON, ModBlocks.SACRED_OLIVE_PLANKS);
+        fenceItem(ModBlocks.SACRED_OLIVE_FENCE, ModBlocks.SACRED_OLIVE_PLANKS);
+        basicItem(ModBlocks.SACRED_OLIVE_DOOR.asItem());
+
         basicItem(ModItems.OLIVE_SIGN.get());
+        basicItem(ModItems.OLIVE_HANGING_SIGN.get());
+
+        basicItem(ModItems.SACRED_OLIVE_SIGN.get());
+        basicItem(ModItems.SACRED_OLIVE_HANGING_SIGN.get());
 
         saplingItem(ModBlocks.OLIVE_SAPLING);
+
+        // BRONZE
+        handheldItem(ModItems.BRONZE_SWORD);
+        handheldItem(ModItems.BRONZE_PICKAXE);
+        handheldItem(ModItems.BRONZE_GREATAXE);
+        handheldItem(ModItems.BRONZE_SHOVEL);
+        handheldItem(ModItems.BRONZE_HOE);
+
+        // BRONSRUN
+        handheldItem(ModItems.BRONSRUN_SWORD);
+        handheldItem(ModItems.BRONSRUN_PICKAXE);
+        handheldItem(ModItems.BRONSRUN_GREATAXE);
+        handheldItem(ModItems.BRONSRUN_SHOVEL);
+        handheldItem(ModItems.BRONSRUN_HOE);
+
+        // KHARVAK IRON
+        handheldItem(ModItems.KHARVAK_IRON_SWORD);
+        handheldItem(ModItems.KHARVAK_IRON_PICKAXE);
+        handheldItem(ModItems.KHARVAK_IRON_AXE);
+        handheldItem(ModItems.KHARVAK_IRON_SHOVEL);
+        handheldItem(ModItems.KHARVAK_IRON_HOE);
+
+        // WHAT REMAINS
+        handheldItem(ModItems.WHAT_REMAINS_WARBLADE);
+        handheldItem(ModItems.WHAT_REMAINS_PICKAXE);
+        handheldItem(ModItems.WHAT_REMAINS_AXE);
+        handheldItem(ModItems.WHAT_REMAINS_SHOVEL);
+        handheldItem(ModItems.WHAT_REMAINS_HOE);
+
+        // SILVER
+        handheldItem(ModItems.SILVER_LONGSWORD);
+        handheldItem(ModItems.SILVER_PICKAXE);
+        handheldItem(ModItems.SILVER_AXE);
+        handheldItem(ModItems.SILVER_SHOVEL);
+        handheldItem(ModItems.SILVER_HOE);
+
+        // OLIVA ARGENTEA
+        handheldItem(ModItems.OLIVA_ARGENTEA_TEMPLAR_SWORD);
+        handheldItem(ModItems.OLIVA_ARGENTEA_PICKAXE);
+        handheldItem(ModItems.OLIVA_ARGENTEA_BATTLEAXE);
+        handheldItem(ModItems.OLIVA_ARGENTEA_SHOVEL);
+        handheldItem(ModItems.OLIVA_ARGENTEA_HOE);
+
+        // SOLRA
+        handheldItem(ModItems.SOLRA_SWORD);
+        handheldItem(ModItems.SOLRA_PICKAXE);
+        handheldItem(ModItems.SOLRA_AXE);
+        handheldItem(ModItems.SOLRA_SHOVEL);
+        handheldItem(ModItems.SOLRA_HOE);
+
+        // PTAHTITE
+        handheldItem(ModItems.PTAHTITE_LONGSWORD);
+        handheldItem(ModItems.PTAHTITE_PICKAXE);
+        handheldItem(ModItems.PTAHTITE_AXE);
+        handheldItem(ModItems.PTAHTITE_SHOVEL);
+        handheldItem(ModItems.PTAHTITE_HOE);
     }
 
     private ItemModelBuilder saplingItem(DeferredBlock<Block> item) {
@@ -127,4 +214,5 @@ public class ModItemModelProvider extends ItemModelProvider {
                 ResourceLocation.parse("item/handheld")).texture("layer0",
                 ResourceLocation.fromNamespaceAndPath(AnEndlessWar.MODID,"item/" + item.getId().getPath()));
     }
+
 }

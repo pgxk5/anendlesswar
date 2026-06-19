@@ -1,14 +1,11 @@
 package net.z.anendlesswar.datagen;
 
-import net.minecraft.world.level.block.StandingSignBlock;
-import net.minecraft.world.level.block.WallSignBlock;
+import net.minecraft.world.level.block.*;
 import net.z.anendlesswar.AnEndlessWar;
 import net.z.anendlesswar.block.ModBlocks;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -32,6 +29,54 @@ public class ModBlockStateProvider extends BlockStateProvider {
         logBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_SACRED_OLIVE_LOG.get()));
         axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_SACRED_OLIVE_WOOD.get()), blockTexture(ModBlocks.STRIPPED_SACRED_OLIVE_LOG.get()), blockTexture(ModBlocks.STRIPPED_SACRED_OLIVE_LOG.get()));
 
+        axisBlock(ModBlocks.REMNANT_CONTAMINATED_BIG_BONE.get(),
+                blockTexture(ModBlocks.REMNANT_CONTAMINATED_BIG_BONE.get()),
+                modLoc("block/remnant_contaminated_big_bone_top"));
+
+
+
+        blockWithItem(ModBlocks.TIN_ORE);
+        blockWithItem(ModBlocks.RAW_TIN_BLOCK);
+        blockWithItem(ModBlocks.GALENA_ORE);
+        blockWithItem(ModBlocks.RAW_GALENA_BLOCK);
+        simpleBlockWithItem(
+                ModBlocks.SOLRA_ORE.get(),
+                models().cubeBottomTop(
+                        "solra_ore",
+                        modLoc("block/solra_ore"),
+                        modLoc("block/solra_ore_top"),
+                        modLoc("block/solra_ore_top")
+                )
+        );
+        blockWithItem(ModBlocks.VORGRAN_COAL_ORE);
+        blockItem(ModBlocks.REMNANT_CONTAMINATED_BIG_BONE);
+
+        blockWithItem(ModBlocks.TIN_BLOCK);
+        blockWithItem(ModBlocks.BRONZE_BLOCK);
+        blockWithItem(ModBlocks.SILVER_BLOCK);
+        blockWithItem(ModBlocks.KHARVAK_IRON_BLOCK);
+        blockWithItem(ModBlocks.SOLRA_BLOCK);
+
+        blockWithItem(ModBlocks.VORGRAN_COAL_BLOCK);
+
+        simpleBlockWithItem(
+                ModBlocks.AURIC_SAND.get(),
+                models().cubeBottomTop(
+                        "auric_sand",
+                        modLoc("block/auric_sand"),
+                        modLoc("block/auric_sand_top"),
+                        modLoc("block/auric_sand_top")
+                )
+        );
+        simpleBlockWithItem(
+                ModBlocks.WET_AURIC_SAND.get(),
+                models().cubeBottomTop(
+                        "wet_auric_sand",
+                        modLoc("block/wet_auric_sand"),
+                        modLoc("block/wet_auric_sand_top"),
+                        modLoc("block/wet_auric_sand_top")
+                )
+        );
 
         blockItem(ModBlocks.OLIVE_LOG);
         blockItem(ModBlocks.OLIVE_WOOD);
@@ -51,10 +96,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.SACRED_OLIVE_PLANKS);
 
         leavesBlock(ModBlocks.SACRED_OLIVE_LEAVES);
-        blockWithItem(ModBlocks.TIN_BLOCK);
 
-        blockWithItem(ModBlocks.TIN_ORE);
-
+        // MADERA OLIVO
         stairsBlock(ModBlocks.OLIVE_STAIRS.get(), blockTexture(ModBlocks.OLIVE_PLANKS.get()));
         slabBlock(ModBlocks.OLIVE_SLAB.get(), blockTexture(ModBlocks.OLIVE_PLANKS.get()), blockTexture(ModBlocks.OLIVE_PLANKS.get()));
 
@@ -75,6 +118,38 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         signBlock(ModBlocks.OLIVE_SIGN.get(), ModBlocks.OLIVE_WALL_SIGN.get(),
                 blockTexture(ModBlocks.OLIVE_PLANKS.get()));
+        hangingSignBlock(
+                ModBlocks.OLIVE_HANGING_SIGN.get(),
+                ModBlocks.OLIVE_WALL_HANGING_SIGN.get(),
+                blockTexture(ModBlocks.OLIVE_PLANKS.get())
+        );
+
+        // MADERA OLIVO SAGRADA
+        stairsBlock(ModBlocks.SACRED_OLIVE_STAIRS.get(), blockTexture(ModBlocks.SACRED_OLIVE_PLANKS.get()));
+        slabBlock(ModBlocks.SACRED_OLIVE_SLAB.get(), blockTexture(ModBlocks.SACRED_OLIVE_PLANKS.get()), blockTexture(ModBlocks.SACRED_OLIVE_PLANKS.get()));
+
+        buttonBlock(ModBlocks.SACRED_OLIVE_BUTTON.get(), blockTexture(ModBlocks.SACRED_OLIVE_PLANKS.get()));
+        pressurePlateBlock(ModBlocks.SACRED_OLIVE_PRESSURE_PLATE.get(), blockTexture(ModBlocks.SACRED_OLIVE_PLANKS.get()));
+
+        fenceBlock(ModBlocks.SACRED_OLIVE_FENCE.get(), blockTexture(ModBlocks.SACRED_OLIVE_PLANKS.get()));
+        fenceGateBlock(ModBlocks.SACRED_OLIVE_FENCE_GATE.get(), blockTexture(ModBlocks.SACRED_OLIVE_PLANKS.get()));
+
+        doorBlockWithRenderType(ModBlocks.SACRED_OLIVE_DOOR.get(), modLoc("block/sacred_olive_door_bottom"), modLoc("block/sacred_olive_door_top"), "cutout");
+        trapdoorBlockWithRenderType(ModBlocks.SACRED_OLIVE_TRAPDOOR.get(), modLoc("block/sacred_olive_trapdoor"), true, "cutout");
+
+        blockItem(ModBlocks.SACRED_OLIVE_STAIRS);
+        blockItem(ModBlocks.SACRED_OLIVE_SLAB);
+        blockItem(ModBlocks.SACRED_OLIVE_PRESSURE_PLATE);
+        blockItem(ModBlocks.SACRED_OLIVE_FENCE_GATE);
+        blockItem(ModBlocks.SACRED_OLIVE_TRAPDOOR, "_bottom");
+
+        signBlock(ModBlocks.SACRED_OLIVE_SIGN.get(), ModBlocks.SACRED_OLIVE_WALL_SIGN.get(),
+                blockTexture(ModBlocks.SACRED_OLIVE_PLANKS.get()));
+        hangingSignBlock(
+                ModBlocks.SACRED_OLIVE_HANGING_SIGN.get(),
+                ModBlocks.SACRED_OLIVE_WALL_HANGING_SIGN.get(),
+                blockTexture(ModBlocks.SACRED_OLIVE_PLANKS.get())
+        );
     }
 
     private void saplingBlock(DeferredBlock<Block> blockRegistryObject) {

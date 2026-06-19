@@ -9,6 +9,7 @@ import net.z.anendlesswar.block.ModBlocks;
 import net.z.anendlesswar.block.entities.ModBlockEntities;
 import net.z.anendlesswar.item.ModCreativeModeTabs;
 import net.z.anendlesswar.item.ModItems;
+import net.z.anendlesswar.loot.ModLootModifiers;
 import net.z.anendlesswar.util.ModWoodTypes;
 import org.slf4j.Logger;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
@@ -23,14 +24,11 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import net.minecraft.client.renderer.blockentity.HangingSignRenderer;
 
-
-// The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(AnEndlessWar.MODID)
 public class AnEndlessWar {
-    // Define mod id in a common place for everything to reference
     public static final String MODID = "anendlesswar";
-    // Directly reference a slf4j logger
     public static final Logger LOGGER = LogUtils.getLogger();
 
     public AnEndlessWar(IEventBus modEventBus, ModContainer modContainer) {
@@ -44,39 +42,44 @@ public class AnEndlessWar {
         ModBlocks.register(modEventBus);
         ModBlockEntities.register(modEventBus);
 
-        // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modEventBus.addListener(this::addCreative);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+
+        ModLootModifiers.LOOT_MODIFIER_SERIALIZERS.register(modEventBus);
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
-        event.enqueueWork(() -> {
-            Sheets.addWoodType(ModWoodTypes.OLIVE);
-        });
+
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.RAW_TIN);
-            event.accept(ModItems.CRUSHED_TIN);
-            event.accept(ModItems.TIN_INGOT);
+
         }
 
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-            event.accept(ModBlocks.TIN_ORE);
-            event.accept(ModBlocks.TIN_BLOCK);
+
         }
     }
 
 
     @OnlyIn(Dist.CLIENT)
     private void clientSetup(FMLClientSetupEvent event) {
+
         event.enqueueWork(() -> {
+            Sheets.addWoodType(ModWoodTypes.OLIVE);
+            Sheets.addWoodType(ModWoodTypes.SACRED_OLIVE);
             BlockEntityRenderers.register(
-                    ModBlockEntities.OLIVE_SIGN_BLOCK_ENTITY.get(),
+                    ModBlockEntities.MOD_SIGN.get(),
                     SignRenderer::new
             );
+            BlockEntityRenderers.register(
+                    ModBlockEntities.MOD_HANGING_SIGN.get(),
+                    HangingSignRenderer::new
+            );
+
         });
+
     }
 
     @SubscribeEvent

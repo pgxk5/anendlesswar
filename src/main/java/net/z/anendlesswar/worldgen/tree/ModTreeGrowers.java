@@ -10,7 +10,7 @@ public class ModTreeGrowers {
 
     public static final TreeGrower OLIVE = new TreeGrower(
             AnEndlessWar.MODID + ":olive",
-            0.05f, // 5%
+            0.05f, // 1%
             Optional.empty(), // megaTree
             Optional.empty(), // secondaryMegaTree
             Optional.of(ModConfiguredFeatures.OLIVE_KEY), // árbol normal
