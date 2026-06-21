@@ -1,7 +1,29 @@
 {
-  "parent": "anendlesswar:item/neiths_longbow",
+  "parent": "item/generated",
   "texture_size": [32, 32],
   "textures": {
     "layer0": "anendlesswar:item/neiths_longbow_pulling_2"
+  },
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [ -80, 260, -40 ],
+      "translation": [ -1, -2, 3.5 ],
+      "scale": [ 1.5, 1.5, 1 ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [ -80, -280, 40 ],
+      "translation": [ -1, -2, 3.5 ],
+      "scale": [ 1.5, 1.5, 1 ]
+    },
+    "firstperson_righthand": {
+      "rotation": [ 0, -90, 25 ],
+      "translation": [ 1.13, 3.2, 1.13],
+      "scale": [ 1.5, 1.5, 1 ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [ 0, 90, -25 ],
+      "translation": [ 1.13, 3.2, 1.13],
+      "scale": [ 1.5, 1.5, 1 ]
+    }
   }
 }

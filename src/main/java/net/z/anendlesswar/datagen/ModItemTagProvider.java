@@ -134,5 +134,45 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.OLIVA_ARGENTEA_HOE.get())
                 .add(ModItems.SOLRA_HOE.get())
                 .add(ModItems.PTAHTITE_HOE.get());
+        tag(ItemTags.TRIMMABLE_ARMOR)
+                .add(ModItems.BRONZE_HELMET.get())
+                .add(ModItems.BRONZE_CHESTPLATE.get())
+                .add(ModItems.BRONZE_LEGGINGS.get())
+                .add(ModItems.BRONZE_BOOTS.get())
+
+                .add(ModItems.BRONSRUN_HELMET.get())
+                .add(ModItems.BRONSRUN_CHESTPLATE.get())
+                .add(ModItems.BRONSRUN_LEGGINGS.get())
+                .add(ModItems.BRONSRUN_BOOTS.get())
+
+                .add(ModItems.KHARVAK_IRON_HELMET.get())
+                .add(ModItems.KHARVAK_IRON_CHESTPLATE.get())
+                .add(ModItems.KHARVAK_IRON_LEGGINGS.get())
+                .add(ModItems.KHARVAK_IRON_BOOTS.get())
+
+                .add(ModItems.WHAT_REMAINS_HELMET.get())
+                .add(ModItems.WHAT_REMAINS_CHESTPLATE.get())
+                .add(ModItems.WHAT_REMAINS_LEGGINGS.get())
+                .add(ModItems.WHAT_REMAINS_BOOTS.get())
+
+                .add(ModItems.SILVER_HELMET.get())
+                .add(ModItems.SILVER_CHESTPLATE.get())
+                .add(ModItems.SILVER_LEGGINGS.get())
+                .add(ModItems.SILVER_BOOTS.get())
+
+                .add(ModItems.OLIVA_ARGENTEA_HELMET.get())
+                .add(ModItems.OLIVA_ARGENTEA_CHESTPLATE.get())
+                .add(ModItems.OLIVA_ARGENTEA_LEGGINGS.get())
+                .add(ModItems.OLIVA_ARGENTEA_BOOTS.get())
+
+                .add(ModItems.SOLRA_HELMET.get())
+                .add(ModItems.SOLRA_CHESTPLATE.get())
+                .add(ModItems.SOLRA_LEGGINGS.get())
+                .add(ModItems.SOLRA_BOOTS.get())
+
+                .add(ModItems.PTAHTITE_HELMET.get())
+                .add(ModItems.PTAHTITE_CHESTPLATE.get())
+                .add(ModItems.PTAHTITE_LEGGINGS.get())
+                .add(ModItems.PTAHTITE_BOOTS.get());
     }
 }

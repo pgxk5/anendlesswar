@@ -11,6 +11,7 @@ import net.z.anendlesswar.effect.ModEffects;
 import net.z.anendlesswar.item.ModCreativeModeTabs;
 import net.z.anendlesswar.item.ModItems;
 import net.z.anendlesswar.loot.ModLootModifiers;
+import net.z.anendlesswar.util.ModItemProperties;
 import net.z.anendlesswar.util.ModWoodTypes;
 import org.slf4j.Logger;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
@@ -79,7 +80,7 @@ public class AnEndlessWar {
                     ModBlockEntities.MOD_HANGING_SIGN.get(),
                     HangingSignRenderer::new
             );
-
+            ModItemProperties.addCustomItemProperties();
         });
 
     }
@@ -88,4 +89,5 @@ public class AnEndlessWar {
     public void onServerStarting(ServerStartingEvent event) {
 
     }
+
 }

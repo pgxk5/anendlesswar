@@ -94,6 +94,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.BRONZE_SHOVEL);
         handheldItem(ModItems.BRONZE_HOE);
 
+        trimmedArmorItem(ModItems.BRONZE_HELMET);
+        trimmedArmorItem(ModItems.BRONZE_CHESTPLATE);
+        trimmedArmorItem(ModItems.BRONZE_LEGGINGS);
+        trimmedArmorItem(ModItems.BRONZE_BOOTS);
+
         // BRONSRUN
         handheldItem(ModItems.BRONSRUN_SWORD);
         handheldItem(ModItems.BRONSRUN_PICKAXE);
@@ -101,12 +106,22 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.BRONSRUN_SHOVEL);
         handheldItem(ModItems.BRONSRUN_HOE);
 
+        trimmedArmorItem(ModItems.BRONSRUN_HELMET);
+        trimmedArmorItem(ModItems.BRONSRUN_CHESTPLATE);
+        trimmedArmorItem(ModItems.BRONSRUN_LEGGINGS);
+        trimmedArmorItem(ModItems.BRONSRUN_BOOTS);
+
         // KHARVAK IRON
         handheldItem(ModItems.KHARVAK_IRON_SWORD);
         handheldItem(ModItems.KHARVAK_IRON_PICKAXE);
         handheldItem(ModItems.KHARVAK_IRON_AXE);
         handheldItem(ModItems.KHARVAK_IRON_SHOVEL);
         handheldItem(ModItems.KHARVAK_IRON_HOE);
+
+        trimmedArmorItem(ModItems.KHARVAK_IRON_HELMET);
+        trimmedArmorItem(ModItems.KHARVAK_IRON_CHESTPLATE);
+        trimmedArmorItem(ModItems.KHARVAK_IRON_LEGGINGS);
+        trimmedArmorItem(ModItems.KHARVAK_IRON_BOOTS);
 
         // WHAT REMAINS
         handheldItem(ModItems.WHAT_REMAINS_WARBLADE);
@@ -116,12 +131,23 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.WHAT_REMAINS_SHOVEL);
         handheldItem(ModItems.WHAT_REMAINS_HOE);
 
+        trimmedArmorItem(ModItems.WHAT_REMAINS_HELMET);
+        trimmedArmorItem(ModItems.WHAT_REMAINS_CHESTPLATE);
+        trimmedArmorItem(ModItems.WHAT_REMAINS_LEGGINGS);
+        trimmedArmorItem(ModItems.WHAT_REMAINS_BOOTS);
+
         // SILVER
         handheldItem(ModItems.SILVER_LONGSWORD);
         handheldItem(ModItems.SILVER_PICKAXE);
         handheldItem(ModItems.SILVER_AXE);
         handheldItem(ModItems.SILVER_SHOVEL);
         handheldItem(ModItems.SILVER_HOE);
+
+        trimmedArmorItem(ModItems.SILVER_HELMET);
+        trimmedArmorItem(ModItems.SILVER_CHESTPLATE);
+        trimmedArmorItem(ModItems.SILVER_LEGGINGS);
+        trimmedArmorItem(ModItems.SILVER_BOOTS);
+
 
         // OLIVA ARGENTEA
         handheldItem(ModItems.OLIVA_ARGENTEA_TEMPLAR_SWORD);
@@ -130,6 +156,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.OLIVA_ARGENTEA_SHOVEL);
         handheldItem(ModItems.OLIVA_ARGENTEA_HOE);
 
+        trimmedArmorItem(ModItems.OLIVA_ARGENTEA_HELMET);
+        trimmedArmorItem(ModItems.OLIVA_ARGENTEA_CHESTPLATE);
+        trimmedArmorItem(ModItems.OLIVA_ARGENTEA_LEGGINGS);
+        trimmedArmorItem(ModItems.OLIVA_ARGENTEA_BOOTS);
+
         // SOLRA
         handheldItem(ModItems.SOLRA_SWORD);
         handheldItem(ModItems.SOLRA_PICKAXE);
@@ -137,12 +168,22 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.SOLRA_SHOVEL);
         handheldItem(ModItems.SOLRA_HOE);
 
+        trimmedArmorItem(ModItems.SOLRA_HELMET);
+        trimmedArmorItem(ModItems.SOLRA_CHESTPLATE);
+        trimmedArmorItem(ModItems.SOLRA_LEGGINGS);
+        trimmedArmorItem(ModItems.SOLRA_BOOTS);
+
         // PTAHTITE
         handheldItem(ModItems.PTAHTITE_LONGSWORD);
         handheldItem(ModItems.PTAHTITE_PICKAXE);
         handheldItem(ModItems.PTAHTITE_AXE);
         handheldItem(ModItems.PTAHTITE_SHOVEL);
         handheldItem(ModItems.PTAHTITE_HOE);
+
+        trimmedArmorItem(ModItems.PTAHTITE_HELMET);
+        trimmedArmorItem(ModItems.PTAHTITE_CHESTPLATE);
+        trimmedArmorItem(ModItems.PTAHTITE_LEGGINGS);
+        trimmedArmorItem(ModItems.PTAHTITE_BOOTS);
     }
 
     private ItemModelBuilder saplingItem(DeferredBlock<Block> item) {
