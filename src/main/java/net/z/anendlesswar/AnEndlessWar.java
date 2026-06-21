@@ -7,6 +7,7 @@ import net.neoforged.api.distmarker.OnlyIn;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.z.anendlesswar.block.ModBlocks;
 import net.z.anendlesswar.block.entities.ModBlockEntities;
+import net.z.anendlesswar.effect.ModEffects;
 import net.z.anendlesswar.item.ModCreativeModeTabs;
 import net.z.anendlesswar.item.ModItems;
 import net.z.anendlesswar.loot.ModLootModifiers;
@@ -46,6 +47,7 @@ public class AnEndlessWar {
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 
         ModLootModifiers.LOOT_MODIFIER_SERIALIZERS.register(modEventBus);
+        ModEffects.MOB_EFFECT.register(modEventBus);
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {

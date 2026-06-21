@@ -1,11 +1,19 @@
 package net.z.anendlesswar.item;
 
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.EquipmentSlotGroup;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.*;
+import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.z.anendlesswar.AnEndlessWar;
 import net.z.anendlesswar.block.ModBlocks;
+import net.z.anendlesswar.item.custom.DaggerItem;
+import net.z.anendlesswar.item.custom.TemplarSwordItem;
+import net.z.anendlesswar.item.custom.WaraxeItem;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(AnEndlessWar.MODID);
@@ -107,7 +115,7 @@ public class ModItems {
     // ------------------------------------------------------------------------------------------------------------------------
     public static final DeferredItem<Item> BRONSRUN_SWORD = ITEMS.register("bronsrun_sword",
             () -> new SwordItem(ModToolTiers.BRONSRUN, new Item.Properties()
-                    .attributes(SwordItem.createAttributes(ModToolTiers.BRONSRUN, 5, -2.2F))));
+                    .attributes(SwordItem.createAttributes(ModToolTiers.BRONSRUN, 2, -2.2F))));
 
     public static final DeferredItem<Item> BRONSRUN_PICKAXE = ITEMS.register("bronsrun_pickaxe",
             () -> new PickaxeItem(ModToolTiers.BRONSRUN, new Item.Properties()
@@ -115,11 +123,11 @@ public class ModItems {
 
     public static final DeferredItem<Item> BRONSRUN_GREATAXE = ITEMS.register("bronsrun_greataxe",
             () -> new AxeItem(ModToolTiers.BRONSRUN, new Item.Properties()
-                    .attributes(AxeItem.createAttributes(ModToolTiers.BRONSRUN, 7, -2.8F))));
+                    .attributes(AxeItem.createAttributes(ModToolTiers.BRONSRUN, 3, -2.8F))));
 
-    public static final DeferredItem<Item> BRONSRUN_BATTLEAXE = ITEMS.register("bronsrun_battleaxe",
-            () -> new AxeItem(ModToolTiers.BRONSRUN, new Item.Properties()
-                    .attributes(AxeItem.createAttributes(ModToolTiers.BRONSRUN, 12, -3.8F))));
+    public static final DeferredItem<Item> BONEBREAKER = ITEMS.register("bonebreaker",
+            () -> new WaraxeItem(ModToolTiers.BRONSRUN, new Item.Properties()
+                    .attributes(AxeItem.createAttributes(ModToolTiers.BRONSRUN, 12, -3.7F))));
 
     public static final DeferredItem<Item> BRONSRUN_SHOVEL = ITEMS.register("bronsrun_shovel",
             () -> new ShovelItem(ModToolTiers.BRONSRUN, new Item.Properties()
@@ -155,9 +163,13 @@ public class ModItems {
     // ------------------------------------------------------------------------------------------------------------------------
     //                                                    WHAT REMAINS
     // ------------------------------------------------------------------------------------------------------------------------
+    public static final DeferredItem<Item> WHAT_REMAINS_FANG = ITEMS.register("what_remains_fang",
+            () -> new DaggerItem(ModToolTiers.WHAT_REMAINS, new Item.Properties()
+                    .attributes(SwordItem.createAttributes(ModToolTiers.WHAT_REMAINS, -6.0F, -0.5F))));
+
     public static final DeferredItem<Item> WHAT_REMAINS_WARBLADE = ITEMS.register("what_remains_warblade",
             () -> new SwordItem(ModToolTiers.WHAT_REMAINS, new Item.Properties()
-                    .attributes(SwordItem.createAttributes(ModToolTiers.WHAT_REMAINS, 5, -2.2F))));
+                    .attributes(SwordItem.createAttributes(ModToolTiers.WHAT_REMAINS, 2, -2.2F))));
 
     public static final DeferredItem<Item> WHAT_REMAINS_PICKAXE = ITEMS.register("what_remains_pickaxe",
             () -> new PickaxeItem(ModToolTiers.WHAT_REMAINS, new Item.Properties()
@@ -165,7 +177,7 @@ public class ModItems {
 
     public static final DeferredItem<Item> WHAT_REMAINS_AXE = ITEMS.register("what_remains_axe",
             () -> new AxeItem(ModToolTiers.WHAT_REMAINS, new Item.Properties()
-                    .attributes(AxeItem.createAttributes(ModToolTiers.WHAT_REMAINS, 7, -2.8F))));
+                    .attributes(AxeItem.createAttributes(ModToolTiers.WHAT_REMAINS, 3, -2.8F))));
 
     public static final DeferredItem<Item> WHAT_REMAINS_SHOVEL = ITEMS.register("what_remains_shovel",
             () -> new ShovelItem(ModToolTiers.WHAT_REMAINS, new Item.Properties()
@@ -203,7 +215,27 @@ public class ModItems {
     // ------------------------------------------------------------------------------------------------------------------------
     public static final DeferredItem<Item> OLIVA_ARGENTEA_TEMPLAR_SWORD = ITEMS.register("oliva_argentea_templar_sword",
             () -> new SwordItem(ModToolTiers.OLIVA_ARGENTEA, new Item.Properties()
-                    .attributes(SwordItem.createAttributes(ModToolTiers.OLIVA_ARGENTEA, 5, -2.2F))));
+                    .attributes(SwordItem.createAttributes(ModToolTiers.OLIVA_ARGENTEA, 2, -2.2F))));
+
+    public static final DeferredItem<Item> LIGHT_OF_JERUSALEM = ITEMS.register("light_of_jerusalem",
+            () -> new TemplarSwordItem(ModToolTiers.OLIVA_ARGENTEA, new Item.Properties()
+                    .attributes(ItemAttributeModifiers.builder()
+                            .add(Attributes.ATTACK_DAMAGE,
+                                    new AttributeModifier(Item.BASE_ATTACK_DAMAGE_ID,
+                                            ModToolTiers.OLIVA_ARGENTEA.getAttackDamageBonus() + 7,
+                                            AttributeModifier.Operation.ADD_VALUE),
+                                    EquipmentSlotGroup.MAINHAND)
+                            .add(Attributes.ATTACK_SPEED,
+                                    new AttributeModifier(Item.BASE_ATTACK_SPEED_ID,
+                                            -3.0F,
+                                            AttributeModifier.Operation.ADD_VALUE),
+                                    EquipmentSlotGroup.MAINHAND)
+                            .add(Attributes.SWEEPING_DAMAGE_RATIO,
+                                    new AttributeModifier(ResourceLocation.fromNamespaceAndPath("anendlesswar", "templar_sweep"),
+                                            1.0,
+                                            AttributeModifier.Operation.ADD_VALUE),
+                                    EquipmentSlotGroup.MAINHAND)
+                            .build())));
 
     public static final DeferredItem<Item> OLIVA_ARGENTEA_PICKAXE = ITEMS.register("oliva_argentea_pickaxe",
             () -> new PickaxeItem(ModToolTiers.OLIVA_ARGENTEA, new Item.Properties()
@@ -211,7 +243,7 @@ public class ModItems {
 
     public static final DeferredItem<Item> OLIVA_ARGENTEA_BATTLEAXE = ITEMS.register("oliva_argentea_battleaxe",
             () -> new AxeItem(ModToolTiers.OLIVA_ARGENTEA, new Item.Properties()
-                    .attributes(AxeItem.createAttributes(ModToolTiers.OLIVA_ARGENTEA, 7, -2.8F))));
+                    .attributes(AxeItem.createAttributes(ModToolTiers.OLIVA_ARGENTEA, 3, -2.8F))));
 
     public static final DeferredItem<Item> OLIVA_ARGENTEA_SHOVEL = ITEMS.register("oliva_argentea_shovel",
             () -> new ShovelItem(ModToolTiers.OLIVA_ARGENTEA, new Item.Properties()
@@ -249,7 +281,7 @@ public class ModItems {
     // ------------------------------------------------------------------------------------------------------------------------
     public static final DeferredItem<Item> PTAHTITE_LONGSWORD = ITEMS.register("ptahtite_longsword",
             () -> new SwordItem(ModToolTiers.PTAHTITE, new Item.Properties()
-                    .attributes(SwordItem.createAttributes(ModToolTiers.PTAHTITE, 5, -2.2F))));
+                    .attributes(SwordItem.createAttributes(ModToolTiers.PTAHTITE, 2, -2.2F))));
 
     public static final DeferredItem<Item> PTAHTITE_PICKAXE = ITEMS.register("ptahtite_pickaxe",
             () -> new PickaxeItem(ModToolTiers.PTAHTITE, new Item.Properties()
@@ -257,7 +289,7 @@ public class ModItems {
 
     public static final DeferredItem<Item> PTAHTITE_AXE = ITEMS.register("ptahtite_axe",
             () -> new AxeItem(ModToolTiers.PTAHTITE, new Item.Properties()
-                    .attributes(AxeItem.createAttributes(ModToolTiers.PTAHTITE, 7, -2.8F))));
+                    .attributes(AxeItem.createAttributes(ModToolTiers.PTAHTITE, 3, -2.8F))));
 
     public static final DeferredItem<Item> PTAHTITE_SHOVEL = ITEMS.register("ptahtite_shovel",
             () -> new ShovelItem(ModToolTiers.PTAHTITE, new Item.Properties()

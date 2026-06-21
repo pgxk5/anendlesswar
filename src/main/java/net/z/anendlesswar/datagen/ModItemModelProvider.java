@@ -110,6 +110,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         // WHAT REMAINS
         handheldItem(ModItems.WHAT_REMAINS_WARBLADE);
+        handheldItem(ModItems.WHAT_REMAINS_FANG);
         handheldItem(ModItems.WHAT_REMAINS_PICKAXE);
         handheldItem(ModItems.WHAT_REMAINS_AXE);
         handheldItem(ModItems.WHAT_REMAINS_SHOVEL);

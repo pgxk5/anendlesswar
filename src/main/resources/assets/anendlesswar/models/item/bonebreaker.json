@@ -4,7 +4,7 @@
 	"parent": "minecraft:item/handheld",
 	"texture_size": [32, 32],
 	"textures": {
-		"layer0": "anendlesswar:item/bronsrun_battleaxe"
+		"layer0": "anendlesswar:item/bonebreaker"
 	},
 	"display": {
 		"thirdperson_righthand": {
@@ -28,7 +28,8 @@
 			"scale": [2, 2, 1]
 		},
 		"ground": {
-			"translation": [0, 3.5, 0]
+			"translation": [0, 3.5, 0],
+			"scale": [1, 1, 0.5]
 		},
 		"head": {
 			"rotation": [0, 0, 180],
