@@ -12,6 +12,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import net.z.anendlesswar.AnEndlessWar;
 import net.z.anendlesswar.block.ModBlocks;
 import net.z.anendlesswar.item.custom.DaggerItem;
+import net.z.anendlesswar.item.custom.LongbowItem;
 import net.z.anendlesswar.item.custom.TemplarSwordItem;
 import net.z.anendlesswar.item.custom.WaraxeItem;
 
@@ -110,7 +111,25 @@ public class ModItems {
             () -> new HoeItem(ModToolTiers.BRONZE, new Item.Properties()
                     .attributes(HoeItem.createAttributes(ModToolTiers.BRONZE, -3.0F, 0.0F))));
 
-    // -----------------------------------------------------------------------------------------------------------y-------------
+    // ------------------------------------------------------------------------------------------------------------------------
+
+    public static final DeferredItem<ArmorItem> BRONZE_HELMET = ITEMS.register("bronze_helmet",
+            () -> new ArmorItem(ModArmorMaterials.BRONZE_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(22))));
+
+    public static final DeferredItem<ArmorItem> BRONZE_CHESTPLATE = ITEMS.register("bronze_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.BRONZE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(22))));
+
+    public static final DeferredItem<ArmorItem> BRONZE_LEGGINGS = ITEMS.register("bronze_leggings",
+            () -> new ArmorItem(ModArmorMaterials.BRONZE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(22))));
+
+    public static final DeferredItem<ArmorItem> BRONZE_BOOTS = ITEMS.register("bronze_boots",
+            () -> new ArmorItem(ModArmorMaterials.BRONZE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(22))));
+
+    // ------------------------------------------------------------------------------------------------------------------------
     //                                                          BRONSRUN
     // ------------------------------------------------------------------------------------------------------------------------
     public static final DeferredItem<Item> BRONSRUN_SWORD = ITEMS.register("bronsrun_sword",
@@ -138,6 +157,24 @@ public class ModItems {
                     .attributes(HoeItem.createAttributes(ModToolTiers.BRONSRUN, -6.0F, 1.0F))));
 
     // ------------------------------------------------------------------------------------------------------------------------
+
+    public static final DeferredItem<ArmorItem> BRONSRUN_HELMET = ITEMS.register("bronsrun_helmet",
+            () -> new ArmorItem(ModArmorMaterials.BRONSRUN_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(45))));
+
+    public static final DeferredItem<ArmorItem> BRONSRUN_CHESTPLATE = ITEMS.register("bronsrun_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.BRONSRUN_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(45))));
+
+    public static final DeferredItem<ArmorItem> BRONSRUN_LEGGINGS = ITEMS.register("bronsrun_leggings",
+            () -> new ArmorItem(ModArmorMaterials.BRONSRUN_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(45))));
+
+    public static final DeferredItem<ArmorItem> BRONSRUN_BOOTS = ITEMS.register("bronsrun_boots",
+            () -> new ArmorItem(ModArmorMaterials.BRONSRUN_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(45))));
+
+    // ------------------------------------------------------------------------------------------------------------------------
     //                                                      KHARVAK IRON
     // ------------------------------------------------------------------------------------------------------------------------
     public static final DeferredItem<Item> KHARVAK_IRON_SWORD = ITEMS.register("kharvak_iron_sword",
@@ -159,6 +196,24 @@ public class ModItems {
     public static final DeferredItem<Item> KHARVAK_IRON_HOE = ITEMS.register("kharvak_iron_hoe",
             () -> new HoeItem(ModToolTiers.KHARVAK_IRON, new Item.Properties()
                     .attributes(HoeItem.createAttributes(ModToolTiers.KHARVAK_IRON, -3.0F, 0.0F))));
+
+    // ------------------------------------------------------------------------------------------------------------------------
+
+    public static final DeferredItem<ArmorItem> KHARVAK_IRON_HELMET = ITEMS.register("kharvak_iron_helmet",
+            () -> new ArmorItem(ModArmorMaterials.KHARVAK_IRON_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(22))));
+
+    public static final DeferredItem<ArmorItem> KHARVAK_IRON_CHESTPLATE = ITEMS.register("kharvak_iron_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.KHARVAK_IRON_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(22))));
+
+    public static final DeferredItem<ArmorItem> KHARVAK_IRON_LEGGINGS = ITEMS.register("kharvak_iron_leggings",
+            () -> new ArmorItem(ModArmorMaterials.KHARVAK_IRON_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(22))));
+
+    public static final DeferredItem<ArmorItem> KHARVAK_IRON_BOOTS = ITEMS.register("kharvak_iron_boots",
+            () -> new ArmorItem(ModArmorMaterials.KHARVAK_IRON_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(22))));
 
     // ------------------------------------------------------------------------------------------------------------------------
     //                                                    WHAT REMAINS
@@ -188,6 +243,24 @@ public class ModItems {
                     .attributes(HoeItem.createAttributes(ModToolTiers.WHAT_REMAINS, -6.0F, 1.0F))));
 
     // ------------------------------------------------------------------------------------------------------------------------
+
+    public static final DeferredItem<ArmorItem> WHAT_REMAINS_HELMET = ITEMS.register("what_remains_helmet",
+            () -> new ArmorItem(ModArmorMaterials.WHAT_REMAINS_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(45))));
+
+    public static final DeferredItem<ArmorItem> WHAT_REMAINS_CHESTPLATE = ITEMS.register("what_remains_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.WHAT_REMAINS_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(45))));
+
+    public static final DeferredItem<ArmorItem> WHAT_REMAINS_LEGGINGS = ITEMS.register("what_remains_leggings",
+            () -> new ArmorItem(ModArmorMaterials.WHAT_REMAINS_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(45))));
+
+    public static final DeferredItem<ArmorItem> WHAT_REMAINS_BOOTS = ITEMS.register("what_remains_boots",
+            () -> new ArmorItem(ModArmorMaterials.WHAT_REMAINS_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(45))));
+
+    // ------------------------------------------------------------------------------------------------------------------------
     //                                                           SILVER
     // ------------------------------------------------------------------------------------------------------------------------
     public static final DeferredItem<Item> SILVER_LONGSWORD = ITEMS.register("silver_longsword",
@@ -209,6 +282,24 @@ public class ModItems {
     public static final DeferredItem<Item> SILVER_HOE = ITEMS.register("silver_hoe",
             () -> new HoeItem(ModToolTiers.SILVER, new Item.Properties()
                     .attributes(HoeItem.createAttributes(ModToolTiers.SILVER, -3.0F, -0.0F))));
+
+    // ------------------------------------------------------------------------------------------------------------------------
+
+    public static final DeferredItem<ArmorItem> SILVER_HELMET = ITEMS.register("silver_helmet",
+            () -> new ArmorItem(ModArmorMaterials.SILVER_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(22))));
+
+    public static final DeferredItem<ArmorItem> SILVER_CHESTPLATE = ITEMS.register("silver_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.SILVER_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(22))));
+
+    public static final DeferredItem<ArmorItem> SILVER_LEGGINGS = ITEMS.register("silver_leggings",
+            () -> new ArmorItem(ModArmorMaterials.SILVER_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(22))));
+
+    public static final DeferredItem<ArmorItem> SILVER_BOOTS = ITEMS.register("silver_boots",
+            () -> new ArmorItem(ModArmorMaterials.SILVER_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(22))));
 
     // ------------------------------------------------------------------------------------------------------------------------
     //                                                      OLIVA ARGENTEA
@@ -254,6 +345,24 @@ public class ModItems {
                     .attributes(HoeItem.createAttributes(ModToolTiers.OLIVA_ARGENTEA, -6.0F, 1.0F))));
 
     // ------------------------------------------------------------------------------------------------------------------------
+
+    public static final DeferredItem<ArmorItem> OLIVA_ARGENTEA_HELMET = ITEMS.register("oliva_argentea_helmet",
+            () -> new ArmorItem(ModArmorMaterials.OLIVA_ARGENTEA_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(45))));
+
+    public static final DeferredItem<ArmorItem> OLIVA_ARGENTEA_CHESTPLATE = ITEMS.register("oliva_argentea_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.OLIVA_ARGENTEA_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(45))));
+
+    public static final DeferredItem<ArmorItem> OLIVA_ARGENTEA_LEGGINGS = ITEMS.register("oliva_argentea_leggings",
+            () -> new ArmorItem(ModArmorMaterials.OLIVA_ARGENTEA_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(45))));
+
+    public static final DeferredItem<ArmorItem> OLIVA_ARGENTEA_BOOTS = ITEMS.register("oliva_argentea_boots",
+            () -> new ArmorItem(ModArmorMaterials.OLIVA_ARGENTEA_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(45))));
+
+    // ------------------------------------------------------------------------------------------------------------------------
     //                                                            SOLRA
     // ------------------------------------------------------------------------------------------------------------------------
     public static final DeferredItem<Item> SOLRA_SWORD = ITEMS.register("solra_sword",
@@ -277,11 +386,32 @@ public class ModItems {
                     .attributes(HoeItem.createAttributes(ModToolTiers.SOLRA, -3.0F, -0.0F))));
 
     // ------------------------------------------------------------------------------------------------------------------------
+
+    public static final DeferredItem<ArmorItem> SOLRA_HELMET = ITEMS.register("solra_helmet",
+            () -> new ArmorItem(ModArmorMaterials.SOLRA_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(22))));
+
+    public static final DeferredItem<ArmorItem> SOLRA_CHESTPLATE = ITEMS.register("solra_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.SOLRA_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(22))));
+
+    public static final DeferredItem<ArmorItem> SOLRA_LEGGINGS = ITEMS.register("solra_leggings",
+            () -> new ArmorItem(ModArmorMaterials.SOLRA_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(22))));
+
+    public static final DeferredItem<ArmorItem> SOLRA_BOOTS = ITEMS.register("solra_boots",
+            () -> new ArmorItem(ModArmorMaterials.SOLRA_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(22))));
+
+    // ------------------------------------------------------------------------------------------------------------------------
     //                                                         PTAHTITE
     // ------------------------------------------------------------------------------------------------------------------------
     public static final DeferredItem<Item> PTAHTITE_LONGSWORD = ITEMS.register("ptahtite_longsword",
             () -> new SwordItem(ModToolTiers.PTAHTITE, new Item.Properties()
                     .attributes(SwordItem.createAttributes(ModToolTiers.PTAHTITE, 2, -2.2F))));
+
+    public static final DeferredItem<Item> NEITHS_LONGBOW = ITEMS.register("neiths_longbow",
+            () -> new BowItem(new Item.Properties().durability(1152)));
 
     public static final DeferredItem<Item> PTAHTITE_PICKAXE = ITEMS.register("ptahtite_pickaxe",
             () -> new PickaxeItem(ModToolTiers.PTAHTITE, new Item.Properties()
@@ -298,6 +428,27 @@ public class ModItems {
     public static final DeferredItem<Item> PTAHTITE_HOE = ITEMS.register("ptahtite_hoe",
             () -> new HoeItem(ModToolTiers.PTAHTITE, new Item.Properties()
                     .attributes(HoeItem.createAttributes(ModToolTiers.PTAHTITE, -6.0F, 1.0F))));
+
+    // ------------------------------------------------------------------------------------------------------------------------
+
+    public static final DeferredItem<ArmorItem> PTAHTITE_HELMET = ITEMS.register("ptahtite_helmet",
+            () -> new ArmorItem(ModArmorMaterials.PTAHTITE_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+                    new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(45))));
+
+    public static final DeferredItem<ArmorItem> PTAHTITE_CHESTPLATE = ITEMS.register("ptahtite_chestplate",
+            () -> new ArmorItem(ModArmorMaterials.PTAHTITE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE,
+                    new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(45))));
+
+    public static final DeferredItem<ArmorItem> PTAHTITE_LEGGINGS = ITEMS.register("ptahtite_leggings",
+            () -> new ArmorItem(ModArmorMaterials.PTAHTITE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS,
+                    new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(45))));
+
+    public static final DeferredItem<ArmorItem> PTAHTITE_BOOTS = ITEMS.register("ptahtite_boots",
+            () -> new ArmorItem(ModArmorMaterials.PTAHTITE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS,
+                    new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(45))));
+
+    // ------------------------------------------------------------------------------------------------------------------------
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

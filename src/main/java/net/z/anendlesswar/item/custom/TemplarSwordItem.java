@@ -10,6 +10,7 @@ import net.minecraft.world.item.Tier;
 import net.minecraft.world.phys.Vec3;
 
 public class TemplarSwordItem extends SwordItem {
+
     public TemplarSwordItem(Tier tier, Properties properties) {
         super(tier, properties);
     }
@@ -20,8 +21,10 @@ public class TemplarSwordItem extends SwordItem {
                 && player.getAttackStrengthScale(0.5f) >= 1.0f;
 
         if (isFullCharge) {
-            boolean isStormy = attacker.level().isThundering() || attacker.level().isRaining();
-            float chance = isStormy ? 0.50f : 0.20f;
+            long dayTime = attacker.level().getDayTime() % 24000L;
+            boolean isDaytime = dayTime >= 0 && dayTime < 12000;
+
+            float chance = isDaytime ? 0.40f : 0.20f;
 
             if (attacker.getRandom().nextFloat() < chance) {
                 Vec3 direction = target.position()

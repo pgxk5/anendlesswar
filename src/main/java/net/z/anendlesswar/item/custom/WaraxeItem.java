@@ -19,9 +19,14 @@ public class WaraxeItem extends AxeItem{
         boolean isFullCharge = attacker instanceof net.minecraft.world.entity.player.Player player
                 && player.getAttackStrengthScale(0.5f) >= 1.0f;
 
-        if (isFullCharge && !target.hasEffect(ModEffects.FROZEN) && attacker.getRandom().nextFloat() < 0.20f) {
+        long dayTime = attacker.level().getDayTime() % 24000L;
+        boolean isDaytime = dayTime >= 0 && dayTime < 12000;
+
+        float chance = isDaytime ? 0.40f : 0.20f;
+
+        if (isFullCharge && !target.hasEffect(ModEffects.FROZEN) && attacker.getRandom().nextFloat() < chance) {
             target.addEffect(new MobEffectInstance(ModEffects.FROZEN, 200, 0, false, true));
-            target.addEffect(new MobEffectInstance(MobEffects.DARKNESS, 60, 0, false, false ));
+            target.addEffect(new MobEffectInstance(MobEffects.DARKNESS, 60, 0, false, false));
             target.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 200, 0, false, false));
         }
         return super.hurtEnemy(stack, target, attacker);

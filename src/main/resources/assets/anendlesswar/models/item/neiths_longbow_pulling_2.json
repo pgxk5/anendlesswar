@@ -1,0 +1,7 @@
+{
+  "parent": "anendlesswar:item/neiths_longbow",
+  "texture_size": [32, 32],
+  "textures": {
+    "layer0": "anendlesswar:item/neiths_longbow_pulling_2"
+  }
+}

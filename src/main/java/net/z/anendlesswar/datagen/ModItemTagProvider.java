@@ -95,6 +95,8 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.LIGHT_OF_JERUSALEM.get())
                 .add(ModItems.SOLRA_SWORD.get())
                 .add(ModItems.PTAHTITE_LONGSWORD.get());
+        tag(ItemTags.BOW_ENCHANTABLE)
+                .add(ModItems.NEITHS_LONGBOW.get());
         tag(ItemTags.PICKAXES)
                 .add(ModItems.BRONZE_PICKAXE.get())
                 .add(ModItems.BRONSRUN_PICKAXE.get())

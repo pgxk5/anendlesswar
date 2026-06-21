@@ -70,6 +70,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.RAW_GALENA_BLOCK);
                         output.accept(ModBlocks.SILVER_BLOCK);
 
+                        output.accept(ModBlocks.REMNANT_CONTAMINATED_BIG_BONE);
                         output.accept(ModBlocks.KHARVAK_IRON_BLOCK);
 
                         output.accept(ModBlocks.AURIC_SAND);
@@ -137,12 +138,23 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.BRONZE_SHOVEL);
                         output.accept(ModItems.BRONZE_HOE);
 
+                        output.accept(ModItems.BRONZE_HELMET);
+                        output.accept(ModItems.BRONZE_CHESTPLATE);
+                        output.accept(ModItems.BRONZE_LEGGINGS);
+                        output.accept(ModItems.BRONZE_BOOTS);
+
                         // BRONSRUN
+                        output.accept(ModItems.BONEBREAKER);
                         output.accept(ModItems.BRONSRUN_SWORD);
                         output.accept(ModItems.BRONSRUN_PICKAXE);
                         output.accept(ModItems.BRONSRUN_GREATAXE);
                         output.accept(ModItems.BRONSRUN_SHOVEL);
                         output.accept(ModItems.BRONSRUN_HOE);
+
+                        output.accept(ModItems.BRONSRUN_HELMET);
+                        output.accept(ModItems.BRONSRUN_CHESTPLATE);
+                        output.accept(ModItems.BRONSRUN_LEGGINGS);
+                        output.accept(ModItems.BRONSRUN_BOOTS);
 
                         // KHARVAK IRON
                         output.accept(ModItems.KHARVAK_IRON_SWORD);
@@ -151,12 +163,23 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.KHARVAK_IRON_SHOVEL);
                         output.accept(ModItems.KHARVAK_IRON_HOE);
 
+                        output.accept(ModItems.KHARVAK_IRON_HELMET);
+                        output.accept(ModItems.KHARVAK_IRON_CHESTPLATE);
+                        output.accept(ModItems.KHARVAK_IRON_LEGGINGS);
+                        output.accept(ModItems.KHARVAK_IRON_BOOTS);
+
                         // WHAT REMAINS
+                        output.accept(ModItems.WHAT_REMAINS_FANG);
                         output.accept(ModItems.WHAT_REMAINS_WARBLADE);
                         output.accept(ModItems.WHAT_REMAINS_PICKAXE);
                         output.accept(ModItems.WHAT_REMAINS_AXE);
                         output.accept(ModItems.WHAT_REMAINS_SHOVEL);
                         output.accept(ModItems.WHAT_REMAINS_HOE);
+
+                        output.accept(ModItems.WHAT_REMAINS_HELMET);
+                        output.accept(ModItems.WHAT_REMAINS_CHESTPLATE);
+                        output.accept(ModItems.WHAT_REMAINS_LEGGINGS);
+                        output.accept(ModItems.WHAT_REMAINS_BOOTS);
 
                         // SILVER
                         output.accept(ModItems.SILVER_LONGSWORD);
@@ -165,12 +188,23 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.SILVER_SHOVEL);
                         output.accept(ModItems.SILVER_HOE);
 
+                        output.accept(ModItems.SILVER_HELMET);
+                        output.accept(ModItems.SILVER_CHESTPLATE);
+                        output.accept(ModItems.SILVER_LEGGINGS);
+                        output.accept(ModItems.SILVER_BOOTS);
+
                         // OLIVA ARGENTEA
+                        output.accept(ModItems.LIGHT_OF_JERUSALEM);
                         output.accept(ModItems.OLIVA_ARGENTEA_TEMPLAR_SWORD);
                         output.accept(ModItems.OLIVA_ARGENTEA_PICKAXE);
                         output.accept(ModItems.OLIVA_ARGENTEA_BATTLEAXE);
                         output.accept(ModItems.OLIVA_ARGENTEA_SHOVEL);
                         output.accept(ModItems.OLIVA_ARGENTEA_HOE);
+
+                        output.accept(ModItems.OLIVA_ARGENTEA_HELMET);
+                        output.accept(ModItems.OLIVA_ARGENTEA_CHESTPLATE);
+                        output.accept(ModItems.OLIVA_ARGENTEA_LEGGINGS);
+                        output.accept(ModItems.OLIVA_ARGENTEA_BOOTS);
 
                         // SOLRA
                         output.accept(ModItems.SOLRA_SWORD);
@@ -179,12 +213,23 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.SOLRA_SHOVEL);
                         output.accept(ModItems.SOLRA_HOE);
 
+                        output.accept(ModItems.SOLRA_HELMET);
+                        output.accept(ModItems.SOLRA_CHESTPLATE);
+                        output.accept(ModItems.SOLRA_LEGGINGS);
+                        output.accept(ModItems.SOLRA_BOOTS);
+
                         // PTAHTITE
+                        output.accept(ModItems.NEITHS_LONGBOW);
                         output.accept(ModItems.PTAHTITE_LONGSWORD);
                         output.accept(ModItems.PTAHTITE_PICKAXE);
                         output.accept(ModItems.PTAHTITE_AXE);
                         output.accept(ModItems.PTAHTITE_SHOVEL);
                         output.accept(ModItems.PTAHTITE_HOE);
+
+                        output.accept(ModItems.PTAHTITE_HELMET);
+                        output.accept(ModItems.PTAHTITE_CHESTPLATE);
+                        output.accept(ModItems.PTAHTITE_LEGGINGS);
+                        output.accept(ModItems.PTAHTITE_BOOTS);
 
                     }).build());
     public static void register(IEventBus eventBus) {
