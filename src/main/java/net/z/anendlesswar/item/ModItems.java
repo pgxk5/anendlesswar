@@ -11,10 +11,7 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.z.anendlesswar.AnEndlessWar;
 import net.z.anendlesswar.block.ModBlocks;
-import net.z.anendlesswar.item.custom.DaggerItem;
-import net.z.anendlesswar.item.custom.LongbowItem;
-import net.z.anendlesswar.item.custom.TemplarSwordItem;
-import net.z.anendlesswar.item.custom.WaraxeItem;
+import net.z.anendlesswar.item.custom.*;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(AnEndlessWar.MODID);
@@ -159,7 +156,7 @@ public class ModItems {
     // ------------------------------------------------------------------------------------------------------------------------
 
     public static final DeferredItem<ArmorItem> BRONSRUN_HELMET = ITEMS.register("bronsrun_helmet",
-            () -> new ArmorItem(ModArmorMaterials.BRONSRUN_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+            () -> new ModArmorItem(ModArmorMaterials.BRONSRUN_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
                     new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(45))));
 
     public static final DeferredItem<ArmorItem> BRONSRUN_CHESTPLATE = ITEMS.register("bronsrun_chestplate",
@@ -245,7 +242,7 @@ public class ModItems {
     // ------------------------------------------------------------------------------------------------------------------------
 
     public static final DeferredItem<ArmorItem> WHAT_REMAINS_HELMET = ITEMS.register("what_remains_helmet",
-            () -> new ArmorItem(ModArmorMaterials.WHAT_REMAINS_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+            () -> new ModArmorItem(ModArmorMaterials.WHAT_REMAINS_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
                     new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(45))));
 
     public static final DeferredItem<ArmorItem> WHAT_REMAINS_CHESTPLATE = ITEMS.register("what_remains_chestplate",
@@ -347,7 +344,7 @@ public class ModItems {
     // ------------------------------------------------------------------------------------------------------------------------
 
     public static final DeferredItem<ArmorItem> OLIVA_ARGENTEA_HELMET = ITEMS.register("oliva_argentea_helmet",
-            () -> new ArmorItem(ModArmorMaterials.OLIVA_ARGENTEA_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+            () -> new ModArmorItem(ModArmorMaterials.OLIVA_ARGENTEA_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
                     new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(45))));
 
     public static final DeferredItem<ArmorItem> OLIVA_ARGENTEA_CHESTPLATE = ITEMS.register("oliva_argentea_chestplate",
@@ -411,7 +408,7 @@ public class ModItems {
                     .attributes(SwordItem.createAttributes(ModToolTiers.PTAHTITE, 2, -2.2F))));
 
     public static final DeferredItem<Item> NEITHS_LONGBOW = ITEMS.register("neiths_longbow",
-            () -> new BowItem(new Item.Properties().durability(1152)));
+            () -> new LongbowItem(new Item.Properties().durability(1152)));
 
     public static final DeferredItem<Item> PTAHTITE_PICKAXE = ITEMS.register("ptahtite_pickaxe",
             () -> new PickaxeItem(ModToolTiers.PTAHTITE, new Item.Properties()
@@ -432,7 +429,7 @@ public class ModItems {
     // ------------------------------------------------------------------------------------------------------------------------
 
     public static final DeferredItem<ArmorItem> PTAHTITE_HELMET = ITEMS.register("ptahtite_helmet",
-            () -> new ArmorItem(ModArmorMaterials.PTAHTITE_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
+            () -> new ModArmorItem(ModArmorMaterials.PTAHTITE_ARMOR_MATERIAL, ArmorItem.Type.HELMET,
                     new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(45))));
 
     public static final DeferredItem<ArmorItem> PTAHTITE_CHESTPLATE = ITEMS.register("ptahtite_chestplate",
