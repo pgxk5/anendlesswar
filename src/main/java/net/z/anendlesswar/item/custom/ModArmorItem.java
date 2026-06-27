@@ -19,17 +19,24 @@ public class ModArmorItem extends ArmorItem {
     private static final Map<Holder<ArmorMaterial>, List<MobEffectInstance>> MATERIAL_TO_EFFECT_MAP =
             (new ImmutableMap.Builder<Holder<ArmorMaterial>, List<MobEffectInstance>>())
                     .put(ModArmorMaterials.BRONSRUN_ARMOR_MATERIAL,
-                            List.of(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 200, 1, false, false),
-                                    new MobEffectInstance(MobEffects.HEALTH_BOOST, 200, 2, false, false)))
+                            List.of(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 200, 0, false, false),
+                                    new MobEffectInstance(MobEffects.HEALTH_BOOST, 400, 1, false, false)))
+                            // +1 daño, +4 corazones
+
                     .put(ModArmorMaterials.WHAT_REMAINS_ARMOR_MATERIAL,
-                            List.of(new MobEffectInstance(MobEffects.NIGHT_VISION, 200, 1, false, false),
+                            List.of(new MobEffectInstance(MobEffects.NIGHT_VISION, 600, 0, false, false),
                                     new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, 0, false, false)))
+                            // visión nocturna, +20% velocidad
+
                     .put(ModArmorMaterials.OLIVA_ARGENTEA_ARMOR_MATERIAL,
-                            List.of(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 200, 1, false, false),
-                                    new MobEffectInstance(MobEffects.ABSORPTION, 200, 2, false, false)))
+                            List.of(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 200, 0, false, false),
+                                    new MobEffectInstance(MobEffects.ABSORPTION, 400, 2, false, false)))
+                            // resistencia al fuego, +4 absorción
+
                     .put(ModArmorMaterials.PTAHTITE_ARMOR_MATERIAL,
-                            List.of(new MobEffectInstance(MobEffects.REGENERATION, 200, 0, false, false),
-                                    new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 200, 1, false, false)))
+                            List.of(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 400, 1, false, false),
+                                    new MobEffectInstance(MobEffects.REGENERATION, 200, 0, false, false)))
+                            // resistencia al daño, regeneración
                     .build();
 
     public ModArmorItem(Holder<ArmorMaterial> material, Type type, Properties properties) {

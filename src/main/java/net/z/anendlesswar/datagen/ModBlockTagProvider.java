@@ -28,6 +28,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.GALENA_ORE.get())
                 .add(ModBlocks.SOLRA_ORE.get())
                 .add(ModBlocks.REMNANT_CONTAMINATED_BIG_BONE.get())
+                .add(ModBlocks.PURE_ARCHAIC_REMAINS.get())
 
                 .add(ModBlocks.TIN_BLOCK.get())
                 .add(ModBlocks.BRONZE_BLOCK.get())

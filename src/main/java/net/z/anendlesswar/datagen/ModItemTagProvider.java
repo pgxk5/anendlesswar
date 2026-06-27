@@ -134,6 +134,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(ModItems.OLIVA_ARGENTEA_HOE.get())
                 .add(ModItems.SOLRA_HOE.get())
                 .add(ModItems.PTAHTITE_HOE.get());
+
         tag(ItemTags.TRIMMABLE_ARMOR)
                 .add(ModItems.BRONZE_HELMET.get())
                 .add(ModItems.BRONZE_CHESTPLATE.get())

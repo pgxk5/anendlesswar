@@ -59,7 +59,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.SOLRA_INGOT.get());
 
         basicItem(ModItems.CRUSHED_TIN.get());
-        basicItem(ModItems.CRUSHED_SILVER.get());
+        basicItem(ModItems.CRUSHED_GALENA.get());
 
         basicItem(ModItems.HELSHARD.get());
         basicItem(ModItems.SACRED_OLIVE_BRANCH.get());

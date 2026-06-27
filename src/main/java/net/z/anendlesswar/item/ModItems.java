@@ -28,7 +28,7 @@ public class ModItems {
 
     public static final DeferredItem<Item> CRUSHED_TIN = ITEMS.register("crushed_tin",
             () -> new Item(new Item.Properties()));
-    public static final DeferredItem<Item> CRUSHED_SILVER = ITEMS.register("crushed_silver",
+    public static final DeferredItem<Item> CRUSHED_GALENA = ITEMS.register("crushed_galena",
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> KHARVAK_AMALGAMATION = ITEMS.register("kharvak_amalgamation",
             () -> new Item(new Item.Properties()));

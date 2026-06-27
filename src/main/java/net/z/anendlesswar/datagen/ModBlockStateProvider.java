@@ -33,7 +33,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 blockTexture(ModBlocks.REMNANT_CONTAMINATED_BIG_BONE.get()),
                 modLoc("block/remnant_contaminated_big_bone_top"));
 
-
+        axisBlock(ModBlocks.PURE_ARCHAIC_REMAINS.get(),
+                blockTexture(ModBlocks.PURE_ARCHAIC_REMAINS.get()),
+                modLoc("block/pure_archaic_remains_top"));
 
         blockWithItem(ModBlocks.TIN_ORE);
         blockWithItem(ModBlocks.RAW_TIN_BLOCK);
@@ -50,6 +52,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         );
         blockWithItem(ModBlocks.VORGRAN_COAL_ORE);
         blockItem(ModBlocks.REMNANT_CONTAMINATED_BIG_BONE);
+        blockItem(ModBlocks.PURE_ARCHAIC_REMAINS);
 
         blockWithItem(ModBlocks.TIN_BLOCK);
         blockWithItem(ModBlocks.BRONZE_BLOCK);

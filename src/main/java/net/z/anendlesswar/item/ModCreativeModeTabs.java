@@ -27,7 +27,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.RAW_GALENA);
 
                         output.accept(ModItems.CRUSHED_TIN);
-                        output.accept(ModItems.CRUSHED_SILVER);
+                        output.accept(ModItems.CRUSHED_GALENA);
 
                         output.accept(ModItems.TIN_INGOT);
                         output.accept(ModItems.BRONZE_INGOT);
@@ -71,6 +71,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.SILVER_BLOCK);
 
                         output.accept(ModBlocks.REMNANT_CONTAMINATED_BIG_BONE);
+                        output.accept(ModBlocks.PURE_ARCHAIC_REMAINS);
+
                         output.accept(ModBlocks.KHARVAK_IRON_BLOCK);
 
                         output.accept(ModBlocks.AURIC_SAND);

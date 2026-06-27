@@ -58,6 +58,18 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                                                 )
                                 )
                 );
+        this.add(ModBlocks.PURE_ARCHAIC_REMAINS.get(),
+                LootTable.lootTable()
+                        .withPool(
+                                LootPool.lootPool()
+                                        .setRolls(ConstantValue.exactly(1))
+                                        .add(
+                                                LootItem.lootTableItem(ModItems.HELSHARD.get())
+                                                        .when(LootItemRandomChanceCondition.randomChance(0.0095F))
+
+                                        )
+                        )
+        );
 
         this.dropSelf(ModBlocks.OLIVE_LOG.get());
         this.dropSelf(ModBlocks.OLIVE_WOOD.get());

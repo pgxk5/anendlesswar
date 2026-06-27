@@ -145,6 +145,13 @@ public class ModBlocks {
                     .strength(16.6F, 666F)
                     .sound(SoundType.BONE_BLOCK)));
 
+    public static final DeferredBlock<RotatedPillarBlock> PURE_ARCHAIC_REMAINS = registerBlock("pure_archaic_remains",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_CYAN)
+                    .instrument(NoteBlockInstrument.XYLOPHONE)
+                    .requiresCorrectToolForDrops()
+                    .strength(15.5F, 555F)
+                    .sound(SoundType.BONE_BLOCK)));
 
     public static final DeferredBlock<Block> OLIVE_LOG = registerBlock("olive_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
